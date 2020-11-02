@@ -3,11 +3,13 @@ package com.archyx.aureliumskills.util;
 import com.archyx.aureliumskills.AureliumSkills;
 import com.archyx.aureliumskills.configuration.Option;
 import com.archyx.aureliumskills.configuration.OptionL;
+import com.archyx.aureliumskills.player.PlayerData;
 import com.archyx.aureliumskills.skills.PlayerSkill;
 import com.archyx.aureliumskills.skills.Skill;
 import com.archyx.aureliumskills.skills.SkillLoader;
 import com.archyx.aureliumskills.stats.PlayerStat;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -300,7 +302,17 @@ public class MySqlSupport {
         }
         return same;
     }
-    
+
+    // TODO Implement this
+    public boolean hasData() {
+        return true;
+    }
+
+    // TODO Implement this
+    public PlayerData loadPlayerData(Player player) {
+        return null;
+    }
+
     //Tries to open connection
     public void openConnection() throws SQLException, ClassNotFoundException {
         if (connection != null && !connection.isClosed()) {

@@ -29,6 +29,10 @@ public class StatModifier {
         return value;
     }
 
+    public boolean equals(StatModifier modifier) {
+        return stat == modifier.getStat() && value == modifier.getValue();
+    }
+
     public static String applyPlaceholders(String input, StatModifier modifier, Locale locale) {
         Stat stat = modifier.getStat();
         int value = modifier.getValue();
